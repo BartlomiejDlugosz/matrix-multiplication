@@ -35,3 +35,22 @@ void Matrix::set(int m, int n, int val) {
 int Matrix::get(int m, int n) {
   return this->matrix[m][n];
 }
+
+
+Matrix Matrix::multiply(Matrix matrix1, Matrix matrix2) {
+  assert(matrix1.m == matrix2.n);
+
+  Matrix res = Matrix(matrix1.m, matrix2.n);
+  for (int i = 0; i < matrix1.m; i++) {
+    for (int j = 0; j < matrix2.n; j++) {
+      int sum = 0;
+      for (int r = 0; r < matrix1.n; r++) {
+        int term1 = matrix1.matrix[i][r];
+        int term2 = matrix2.matrix[r][j];
+        sum += term1 * term2;
+      }
+      res.matrix[i][j] = sum;
+    }
+  }
+  return res;
+}

@@ -11,6 +11,8 @@ public:
   Matrix(int m, int n);
   Matrix(std::vector<int> list_rep, int m, int n);
 
+  static Matrix multiply(Matrix, Matrix);
+
   void set(int m, int n, int val);
   int get(int m, int n);
 
