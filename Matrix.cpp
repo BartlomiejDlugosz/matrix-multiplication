@@ -27,3 +27,11 @@ Matrix::Matrix(std::vector<int> list_rep, int m, int n) : Matrix(m, n) {
     }
   }
 }
+
+void Matrix::set(int m, int n, int val) {
+  this->matrix[m][n] = val;
+}
+
+int Matrix::get(int m, int n) {
+  return this->matrix[m][n];
+}
