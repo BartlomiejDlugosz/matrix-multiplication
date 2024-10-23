@@ -8,6 +8,7 @@
 
 class Matrix {
 public:
+  Matrix(int m, int n);
   Matrix(std::vector<int> list_rep, int m, int n);
 
 private:
