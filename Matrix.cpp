@@ -37,11 +37,12 @@ int Matrix::get(int m, int n) {
   return this->matrix[m][n];
 }
 
-
+/* Multiplies two matrices in the order provided */
 Matrix Matrix::multiply(Matrix matrix1, Matrix matrix2) {
   assert(matrix1.n == matrix2.m);
 
   Matrix res = Matrix(matrix1.m, matrix2.n);
+
   for (int i = 0; i < matrix1.m; i++) {
     for (int j = 0; j < matrix2.n; j++) {
       int sum = 0;
